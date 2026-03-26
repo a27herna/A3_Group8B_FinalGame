@@ -326,6 +326,9 @@ class Level {
         element.physics = "NONE";
       }
     });
+
+        updateCallToActionObj();
+
   }
 
   // !!!!!REMOVE LATER!!!!!
@@ -359,6 +362,7 @@ class Level {
 function removeRealTimeObjects() {
   PackageObj.deleteAll();
   BrokenPackageObj.deleteAll();
+  CallToActionObj.deleteAll();
 
   currPackage = null;
   oopsPackage = null;

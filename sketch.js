@@ -11,7 +11,7 @@ let timeWithPackage = 0;
 
 let allowPlayerInput = false;
 
-let devCamSkip = false;
+let devCamSkip = true;
 
 let instructionSkip = false;
 
@@ -74,6 +74,10 @@ function update() {
     }
   }
 
+  if (kb.presses("1")) {
+    console.log(CallToActionObj[0].parentObj);
+    CallToActionObj[0].parentObj.debug = true;
+  }
   // if (kb.presses("1")) {
   //   console.log(mainPlayer.mainBody.pos.x);
   //   console.log(mainPlayer.carryon.pos.x);

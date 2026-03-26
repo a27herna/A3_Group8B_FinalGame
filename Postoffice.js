@@ -71,9 +71,15 @@ function initPostoffice() {
   initCalltoActionObj();
   initPackageObj();
 
-  PostofficeObj.hoverObj = () => {
-    let tempObj;
+  PostofficeObj.hoverObj = (i) => {
+    let tempObj = new CallToActionObj.Sprite();
+
+    tempObj.parentObj = PostofficeObj[i];
+    tempObj.pos.x = tempObj.parentObj.pos.x;
+    tempObj.pos.y = tempObj.parentObj.pos.y - tempObj.parentObj.h;
     
+
+    return tempObj;
   };
 }
 
