@@ -1,0 +1,97 @@
+// class Postoffice {
+//   constructor(x, y) {
+//     let tempSprite;
+
+//     let height = 200;
+
+//     tempSprite = new Sprite(x, y - height / 2, height / 1.5, height, "NONE");
+//     tempSprite.layer = 0;
+
+//     // let defaultDraw = tempSprite._draw;
+
+//     // tempSprite.draw = function () {
+//     //   // add custom code here
+//     //   //   rect(-10, -10, 20, 20);
+
+//     //   defaultDraw();
+//     // };
+
+//     this.Sprite = tempSprite;
+//   }
+
+//   releasePackage() {
+//     new Package(
+//       this.Sprite.x,
+//       this.Sprite.y - this.Sprite.height,
+//       "SQUARE",
+//       30,
+//       1,
+//     );
+//   }
+// }
+
+let PostofficeObj;
+
+function initPostoffice() {
+  let objHeight = 200;
+  let objWidth = objHeight / 1.5;
+
+  PostofficeObj = new Group();
+  PostofficeObj.width = objWidth;
+  PostofficeObj.height = objHeight;
+  PostofficeObj.physics = "NONE";
+  PostofficeObj.layer = 0;
+  // PostofficeObj.debug = true;
+
+  // PostofficeObj.draw = function() {
+  //   push();
+
+  //   fill("yellow");
+
+  //   rect(0, 0, PostofficeObj.width, PostofficeObj.height);
+
+  //   fill("white");
+  //   rect(0, -PostofficeObj.height / 4, PostofficeObj.width / 5);
+  //   triangle(-PostofficeObj.width / 10, -PostofficeObj.height / 4 - PostofficeObj.width / 10, PostofficeObj.width / 10, -PostofficeObj.height / 4 - PostofficeObj.width / 10, 0, -PostofficeObj.height / 4)
+  //   pop();
+  // }
+
+  postOfficeImg.resize(0, objHeight * 1.5);
+  PostofficeObj.image = postOfficeImg;
+
+  PostofficeObj.image.offset.y = -postOfficeImg.height / 8;
+  // PostofficeObj.image.scale = 0.5;
+
+  PostofficeObj.packageList = ["basic"];
+  PostofficeObj.packageListLength = PostofficeObj.packageList.length;
+  PostofficeObj.currPackageIndex = -1;
+
+  PostofficeObj.overlapping(mainPlayer.mainBody, summonPackage);
+
+  initPackageObj();
+}
+
+let currPackage;
+function summonPackage() {
+  if (kb.presses("e")) {
+    this.currPackageIndex++;
+    this.currPackageIndex = constrain(
+      this.currPackageIndex,
+      0,
+      this.packageListLength - 1,
+    );
+
+    // console.log(this.packageList);
+    // console.log(this.currPackageIndex);
+    // console.log(this.packageList[this.currPackageIndex]);
+
+    currPackage = createPackageObj(this.packageList[this.currPackageIndex]);
+
+    currPackage.overlapping(RecipientObj);
+
+    packageBornTime = world.realTime;
+    // console.log(this.height);
+    currPackage.pos = this.pos;
+    currPackage.y -= this.height / 4;
+  }
+}
