@@ -39,6 +39,13 @@ function setup() {
   */
   world.updateRate = 60;
 
+  // console.log(windowWidth);
+  // console.log(windowHeight);
+  // Math to keep canvas consistent across devices (0.7, 0.68)
+  // Never mind this broke backgrounds somehow
+  // Most likely due to long decimals
+
+  // cnv = createCanvas(windowWidth * 0.7, windowHeight * 0.68);
   cnv = createCanvas(1150, 650);
   cnv.position((windowWidth - width) / 2, (windowHeight - height) / 2);
 

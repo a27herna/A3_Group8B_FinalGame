@@ -68,7 +68,13 @@ function initPostoffice() {
 
   PostofficeObj.overlapping(mainPlayer.mainBody, summonPackage);
 
+  initCalltoActionObj();
   initPackageObj();
+
+  PostofficeObj.hoverObj = () => {
+    let tempObj;
+    
+  };
 }
 
 let currPackage;
