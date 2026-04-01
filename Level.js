@@ -1,6 +1,7 @@
 let backgroundTile;
 let treeBaseTile;
 let treeMidTile;
+let oneWayPlatform;
 
 let floorTile;
 let ground;
@@ -327,8 +328,7 @@ class Level {
       }
     });
 
-        updateCallToActionObj();
-
+    updateCallToActionObj();
   }
 
   // !!!!!REMOVE LATER!!!!!

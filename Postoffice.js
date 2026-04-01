@@ -41,7 +41,7 @@ function initPostoffice() {
   PostofficeObj.height = objHeight;
   PostofficeObj.physics = "NONE";
   PostofficeObj.layer = 0;
-  // PostofficeObj.debug = true;
+  PostofficeObj.debug = true;
 
   // PostofficeObj.draw = function() {
   //   push();
@@ -71,13 +71,13 @@ function initPostoffice() {
   initCalltoActionObj();
   initPackageObj();
 
-  PostofficeObj.hoverObj = (i) => {
+  PostofficeObj.CTAObj = (i) => {
     let tempObj = new CallToActionObj.Sprite();
 
     tempObj.parentObj = PostofficeObj[i];
+    // !!! Remember POS origin is at the bottom-most grid !!!
     tempObj.pos.x = tempObj.parentObj.pos.x;
-    tempObj.pos.y = tempObj.parentObj.pos.y - tempObj.parentObj.h;
-    
+    tempObj.pos.y = tempObj.parentObj.pos.y - tempObj.parentObj.h - tempObj.hh;
 
     return tempObj;
   };
