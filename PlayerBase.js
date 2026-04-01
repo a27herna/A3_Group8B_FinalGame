@@ -57,6 +57,7 @@ class PlayerBase {
     );
     this.carryon.rotationLock = true;
     this.carryon.color = "Maroon";
+    // this.carryon.debug = true;
     // this.carryon.stroke = "Maroon";
     // this.carryon.friction = 0;
     // this.carryon.mass = 10;
@@ -78,17 +79,34 @@ class PlayerBase {
       size * 0.25,
     );
     this.floorSensor.removeColliders();
-    this.floorSensor.visible = false;
     this.floorSensor.mass = 0;
-    this.floorSensor.debug = false;
+    // this.floorSensor.visible = false;
+    this.floorSensor.debug = true;
 
     this.floorJoiner = new GlueJoint(this.mainBody, this.floorSensor);
     this.floorJoiner.visible = false;
+
+    this.carryonSensor = new Sprite(
+      x,
+      y - this.mainBody.hh - this.carryon.hh - size / 2,
+      size,
+      size,
+    );
+    this.carryonSensor.removeColliders();
+    this.carryonSensor.mass = 0;
+    // this.carryonSensor.visible = false;
+    this.carryonSensor.debug = true;
+
+    this.carryonJoiner = new GlueJoint(this.mainBody, this.carryonSensor);
+    this.carryonJoiner.visible = false;
   }
 
   updatePlayer() {
     if (currPackage != null) {
       this.jumpStrength = this.packageJumpStrength;
+      if (!this.carryonSensor.overlapping(currPackage)) {
+        this.jumpStrength = this.baseJumpStrength;
+      }
     } else {
       this.jumpStrength = this.baseJumpStrength;
     }
@@ -110,12 +128,6 @@ class PlayerBase {
       (keyIsDown(RIGHT_ARROW) || keyIsDown(68)) -
       (keyIsDown(LEFT_ARROW) || keyIsDown(65));
 
-    if (this.floorSensor.overlapping(floorTile)) {
-      if (kb.presses("w") || kb.presses("space")) {
-        this.mainBody.vel.y = -this.jumpStrength;
-      }
-    }
-
     // if (this.mainBody.vel.y < 0) {
     //   this.mainBody.changeAni("idle");
     // }
@@ -133,6 +145,11 @@ class PlayerBase {
       this.mainBody.changeAni("idle");
     }
 
+    if (this.floorSensor.overlapping(floorTile)) {
+      if (kb.presses("w") || kb.presses("space") || kb.presses("up")) {
+        this.mainBody.vel.y = -this.jumpStrength;
+      }
+    }
     if (this.mainBody.vel.y < -2) {
       this.mainBody.changeAni("jumpImpulse");
     }
