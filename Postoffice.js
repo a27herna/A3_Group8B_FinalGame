@@ -104,6 +104,9 @@ function summonPackage() {
     // console.log(this.currPackageIndex);
     // console.log(this.packageList[this.currPackageIndex]);
 
+    if (currPackage != null) {
+      currPackage?.delete();
+    }
     currPackage = createPackageObj(this.packageList[this.currPackageIndex]);
 
     currPackage.overlapping(RecipientObj);
