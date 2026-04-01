@@ -2,6 +2,9 @@ let backgroundTile;
 let treeBaseTile;
 let treeMidTile;
 let oneWayPlatform;
+let oneWayPlatformCenter;
+let oneWayPlatformLeft;
+let oneWayPlatformRight;
 
 let floorTile;
 let ground;
@@ -83,9 +86,13 @@ function terrainDefinition() {
   oneWayPlatform = new platform.Group();
   oneWayPlatform.physics = "NONE";
   oneWayPlatform.color = "teal";
+  // Move down when anna is down new
   oneWayPlatform.tile = "n";
   oneWayPlatform.img = platformTileImg;
   oneWayPlatform.img.scale = gridSize / platformTileImg.width;
+
+  oneWayPlatformCenter = new oneWayPlatform.Group();
+  oneWayPlatformCenter.img = platformTileImg;
 
   VisualForegroundTile = new Group();
   VisualForegroundTile.physics = "NONE";
