@@ -1,7 +1,7 @@
 let mainPlayer;
 let mainBody;
 
-let currentLevelIndex = 0;
+let currentLevelIndex = null;
 let currentLevel;
 
 let packageBrokenCount = 0;
@@ -23,9 +23,11 @@ let levelData;
 
 function preload() {
   getPlayerSaveData();
+  console.log(playerSaveDataTemp);
 
   levelData = loadJSON("levelData.json");
   console.log(levelData);
+
   initAssetFiles();
 }
 
@@ -95,8 +97,8 @@ function keyPressed() {
   if (key === "r" || key === "R") {
     if (allowPlayerInput) {
       //this is a hack solution please fix
-      initLevel();
-      initLevel();
+      initLevel(currentLevelIndex);
+      initLevel(currentLevelIndex);
     }
   }
 }
@@ -116,28 +118,29 @@ function drawFrame() {
 
 function initLevel(index) {
   loop();
-  if (!index) {
-    removeRealTimeObjects();
-    currentLevel?.TileMap.delete();
-    currentLevel?.backgroundTileMap.delete();
+  removeRealTimeObjects();
+  currentLevel?.TileMap.delete();
+  currentLevel?.backgroundTileMap.delete();
+  world.gravity.y = 10;
 
-    world.gravity.y = 10;
-    currentLevel = null;
+  currentLevel = null;
+  if (index == null) {
     currentLevel = new Level([]);
-
-    timeWithPackage = 0;
-    packageBrokenCount = 0;
-
-    // console.log(currentLevel.w + " | " + currentLevel.h);
-
-    initCamPos();
-
-    if (devCamSkip) {
-      allowPlayerInput = true;
-    } else {
-      setTimeout(currentLevel.cameraIntro, 1500);
-    }
   } else {
+    currentLevelIndex = index;
+    currentLevel = new Level(levelData["levels"][index]);
+  }
+  timeWithPackage = 0;
+  packageBrokenCount = 0;
+
+  // console.log(currentLevel.w + " | " + currentLevel.h);
+
+  initCamPos();
+
+  if (devCamSkip) {
+    allowPlayerInput = true;
+  } else {
+    setTimeout(currentLevel.cameraIntro, 1500);
   }
 }
 

@@ -15,7 +15,7 @@ function displayLevelSelect() {
     for (let c = 0; c < gridLength; c++) {
       let loopLevelIndex = c + r * gridLength;
 
-      if (loopLevelIndex == levelData["levels"].length) {
+      if (loopLevelIndex < levelData["levels"].length) {
         fill("white");
       } else {
         fill("darkgrey");
@@ -33,9 +33,16 @@ function displayLevelSelect() {
           height * 0.6 + (r - floor(gridHeight / 2)) * gridYOffset + boxSize / 2
       ) {
         fill("grey");
-        if (mouseIsPressed && loopLevelIndex == 0) {
-          sceneManager = "game";
-          initLevel();
+
+        if (mouseIsPressed) {
+          if (loopLevelIndex < levelData["levels"].length) {
+            sceneManager = "game";
+            console.log(loopLevelIndex);
+            initLevel(loopLevelIndex);
+          } else if (loopLevelIndex == 14) {
+            sceneManager = "game";
+            initLevel();
+          }
         }
       }
 
@@ -226,7 +233,7 @@ function drawLevelScore() {
     textSize(24);
     noStroke();
     fill("black");
-    text(targetScores[i], placementX, placementY + textSize() / 4);
+    text(targetScores[i] + "s", placementX, placementY + textSize() / 4);
   }
 
   let completionTimeMin = int(currentTime / 60);

@@ -1,5 +1,127 @@
 {
-    "levels": [
-        
-    ]
+  "lastUpdated-DMYH": [1, 4, 2026, 17],
+
+  "levels": [
+    {
+      "targetScores": [75, 60, 45],
+      "world": {
+        "tileSet": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "    S o                  r      ",
+          "gggggggggggggggggggggggggggggggg",
+          "dddddddddddddddddddddddddddddddd",
+          "dddddddddddddddddddddddddddddddd"
+        ],
+        "backgroundTileSet": [""],
+        "extraData": {}
+      }
+    },
+    {
+      "targetScores": [75, 60, 45],
+      "world": { "tileSet": [], "backgroundTileSet": [], "extraData": {} }
+    },
+    {
+      "targetScores": [75, 60, 45],
+      "world": { "tileSet": [], "backgroundTileSet": [], "extraData": {} }
+    },
+    {
+      "targetScores": [75, 60, 45],
+      "world": {
+        "tileSet": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "                                                                      ",
+          "                                                                      ",
+          "                                                               r      ",
+          "                                                        nnnnnnnnnnnnn ",
+          "                                                                      ",
+          "                                                           nnn        ",
+          "                                                                      ",
+          "                                                               nnn    ",
+          "                                                                      ",
+          "                                                           nnn        ",
+          "                                                                      ",
+          "                                                               nnn    ",
+          "                                                           nn         ",
+          "                                                                nn    ",
+          "                                                           nn         ",
+          "                                                                nn    ",
+          "                                                           nn         ",
+          "                                                                nn    ",
+          "                                                           nn         ",
+          "                                                                nn    ",
+          "                                                           nn         ",
+          "                                                                nn    ",
+          "                                                           nn         ",
+          "                                                                nn    ",
+          "   S                      o      _ _  _  _  _               n         ",
+          "gggggggggwwwwwwwwwwgggggggggggggwwwwwwwwwwwwwwgggggggggggggggggggggggg",
+          "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+          "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+        ],
+        "backgroundTileSet": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "                                                                      ",
+          "                                                                      ",
+          "                                                                      ",
+          "                                                                      ",
+          "                                                                      ",
+          "                                                                      ",
+          "                                                                      ",
+          "                                                                      ",
+          "                                                                      ",
+          "                                                                      ",
+          "                                                                      ",
+          "                                                                      ",
+          "                                                                      ",
+          "                                                                      ",
+          "                                                                      ",
+          "                                                                      ",
+          "                                                                      ",
+          "                                                                      ",
+          "                                                                      ",
+          "                                                                      ",
+          "                                                                      ",
+          "                                                                      ",
+          "                                                                      ",
+          "                                                                      ",
+          "                                                              T       ",
+          "                                                                      ",
+          "                                                                      ",
+          "                                                                      "
+        ],
+        "extraData": {}
+      }
+    }
+  ]
 }
