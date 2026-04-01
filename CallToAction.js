@@ -11,11 +11,13 @@ function initCalltoActionObj() {
   CallToActionObj.layer = 3;
 
   CallToActionObj.text = "TEST";
-  CallToActionObj.textSize = 12;
+  CallToActionObj.textSize = 24;
+  CallToActionObj.textColor = "white";
+
   CallToActionObj.parentObj = null;
   CallToActionObj.opacity = 0;
 
-  CallToActionObj.debug = true;
+  //   CallToActionObj.debug = true;
   CallToActionObj.overlaps(mainPlayer.mainBody);
   // CallToActionObj.getParentObj = (element) => {
 
@@ -23,7 +25,7 @@ function initCalltoActionObj() {
 }
 
 function updateCallToActionObj() {
-  console.log("start");
+  //   console.log("start");
   CallToActionObj.forEach((element) => {
     // console.log(element);
     CallToActionObjFade(element);
@@ -31,15 +33,21 @@ function updateCallToActionObj() {
 }
 
 function CallToActionObjFade(CTAObj) {
-  // console.log(CTAObj.parentObj != null);
+  const fadeInSeconds = 1;
+  const fadeOutSeconds = 0.75;
+
+  //   console.log(CTAObj.opacity);
   if (CTAObj.parentObj != null) {
     if (CTAObj.parentObj.overlapping(mainPlayer.mainBody)) {
-      if (CTAObj.opacity > 1) {
-        CTAObj.opacity = 1;
-      } else {
-        // !!!triggered frames per second!!!
-        CTAObj.opacity += 0.1;
-      }
+      CTAObj.opacity = min(
+        CTAObj.opacity + 1 / (world.updateRate * fadeInSeconds),
+        1,
+      );
+    } else {
+      CTAObj.opacity = max(
+        CTAObj.opacity - 1 / (world.updateRate * fadeOutSeconds),
+        0,
+      );
     }
   }
 }

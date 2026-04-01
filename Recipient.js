@@ -22,6 +22,24 @@ function initRecipientObj() {
   RecipientObj.satisfied = false;
 
   RecipientObj.overlapping(mainPlayer.mainBody, acceptPackage);
+
+  RecipientObj.CTAObj = (i) => {
+    const CTAWidth = 50;
+    const CTAHeight = 50;
+    let tempObj = new CallToActionObj.Sprite();
+
+    tempObj.text = "E";
+    tempObj.w = CTAWidth;
+    tempObj.h = CTAHeight;
+    tempObj.color = "Grey";
+
+    tempObj.parentObj = RecipientObj[i];
+    // !!! Remember POS origin is at the bottom-most grid !!!
+    tempObj.pos.x = tempObj.parentObj.pos.x;
+    tempObj.pos.y = tempObj.parentObj.pos.y - tempObj.parentObj.h - tempObj.hh;
+
+    return tempObj;
+  };
 }
 
 function acceptPackage() {
