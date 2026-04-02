@@ -17,7 +17,7 @@ let playerIdleAni;
 let playerJumpImpulseAni;
 let kiwiSpriteSheet;
 
-function initAssetFiles() {
+function initImageAssetFiles() {
   // let playerImg1 = loadImage("assets/kiwi_frame_1.webp");
   // let playerImg2 = loadImage("assets/kiwi_frame_2.webp");
   // let playerImg3 = loadImage("assets/kiwi_frame_3.webp");
@@ -40,4 +40,31 @@ function initAssetFiles() {
   postOfficeImg = loadImage("assets/images/mail_pickup.webp");
   recipient1Img = loadImage("assets/images/bat_house.webp");
   kiwiSpriteSheet = loadImage("assets/images/kiwi_spritesheet.png");
+}
+
+let musicStarted = false;
+let generalMusic;
+let amibianceSound1;
+function initSoundAssetFiles() {
+  soundFormats("mp3", "wav");
+  amibianceSound1 = loadSound("assets/sounds/general_ambiance1.wav");
+
+  generalMusic = amibianceSound1;
+}
+
+function startMusicIfNeeded() {
+  if (musicStarted || !generalMusic) return;
+
+  const startLoop = () => {
+    if (!generalMusic.isPlaying()) generalMusic.play();
+    musicStarted = generalMusic.isPlaying();
+  };
+
+  // Some browsers require a user gesture before audio can start.
+  const maybePromise = userStartAudio();
+  if (maybePromise && typeof maybePromise.then === "function") {
+    maybePromise.then(startLoop).catch(() => {});
+  } else {
+    startLoop();
+  }
 }

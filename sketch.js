@@ -28,10 +28,13 @@ function preload() {
   levelData = loadJSON("levelData.json");
   console.log(levelData);
 
-  initAssetFiles();
+  initImageAssetFiles();
+  initSoundAssetFiles();
 }
 
 function setup() {
+  if (generalMusic) generalMusic.setLoop(true);
+  startMusicIfNeeded();
   /*
   !!Init in this order!!
   1. Canvas
@@ -94,6 +97,8 @@ function update() {
 }
 
 function keyPressed() {
+  startMusicIfNeeded();
+
   if (key === "r" || key === "R") {
     if (allowPlayerInput) {
       //this is a hack solution please fix
@@ -101,6 +106,10 @@ function keyPressed() {
       initLevel(currentLevelIndex);
     }
   }
+}
+
+function mousePressed() {
+  startMusicIfNeeded();
 }
 
 function drawFrame() {
