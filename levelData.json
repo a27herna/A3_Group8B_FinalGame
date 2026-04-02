@@ -37,11 +37,62 @@
     },
     {
       "targetScores": [75, 60, 45],
-      "world": { "tileSet": [], "backgroundTileSet": [], "extraData": {} }
-    },
+      "world": { 
+        "tileSet": [ "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "                 n     n     n      n        ",
+          "    S o                                          r",
+          "gggggggggwwwwgggwwwwwggggwwwwwwggggwwwwwgggggggggggg",
+          "ddddddddddddddddddddddddddddddddddddddddddddddddddd",
+          "ddddddddddddddddddddddddddddddddddddddddddddddddddd" ], "backgroundTileSet": [], "extraData": {} }
+        
+     },
     {
-      "targetScores": [75, 60, 45],
-      "world": { "tileSet": [], "backgroundTileSet": [], "extraData": {} }
+      "targetScores": [],
+      "world": {
+        "tileSet": [
+          "                                ",
+          "                                ",
+          "                                ",
+          "            gggg                ",
+          "            o                   ",
+          "                                ",
+          "    S                           ",
+          "gggggggggggggggggggggggggggggggg",
+          "dddddddddddddddddddddddddddddddd",
+          "dddddddddddddddddddddddddddddddd"
+        ],
+        "backgroundTileSet": [
+          "                                ",
+          "                                ",
+          "                                ",
+          "                                ",
+          "                                ",
+          "                                ",
+          "                                ",
+          "                                ",
+          "                             T   ",
+          "                                "
+        ],
+        "extraData": {}
+      }
     },
     {
       "targetScores": [75, 60, 45],
