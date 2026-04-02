@@ -68,28 +68,27 @@
       "targetScores": [],
       "world": {
         "tileSet": [
-          "                                ",
-          "                                ",
-          "                                ",
-          "            gggg                ",
-          "            o                   ",
-          "                                ",
-          "    S                           ",
-          "gggggggggggggggggggggggggggggggg",
-          "dddddddddddddddddddddddddddddddd",
-          "dddddddddddddddddddddddddddddddd"
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "                                                         r",
+          "                                                  n   ddddd",
+          "                                             n        ddddd",
+          "                                        n             ddddd",
+          "                                 n                    ddddd",
+          "                          n                           ddddd",
+          "                   n                                  ddddd",
+          "            n                                         ddddd",
+          "   S o                                                ddddd",
+          "ggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg",
+          "ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+          "ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
         ],
         "backgroundTileSet": [
-          "                                ",
-          "                                ",
-          "                                ",
-          "                                ",
-          "                                ",
-          "                                ",
-          "                                ",
-          "                                ",
-          "                             T   ",
-          "                                "
         ],
         "extraData": {}
       }
