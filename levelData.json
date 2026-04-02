@@ -3,7 +3,7 @@
 
   "levels": [
     {
-      "targetScores": [75, 60, 45],
+      "targetScores": [45, 30, 15],
       "world": {
         "tileSet": [
           "",
@@ -32,17 +32,71 @@
           "dddddddddddddddddddddddddddddddd"
         ],
         "backgroundTileSet": [""],
+        "extraData": {}
+      }
+    },
+    {
+      "targetScores": [70, 50, 30],
+      "world": {
+        "tileSet": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "                          nn         nn           nn               ",
+          "    S o                                                     r     ",
+          "gggggggggwwwwwwwwwwwwgggwwwwwwgggggwwwwwwgggggggwwwwwwgggggggggggg",
+          "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+          "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+        ],
+        "backgroundTileSet": [""],
         "extraData": {},
         "background": "winter"
       }
     },
     {
       "targetScores": [75, 60, 45],
-      "world": { "tileSet": [], "backgroundTileSet": [], "extraData": {} }
-    },
-    {
-      "targetScores": [75, 60, 45],
-      "world": { "tileSet": [], "backgroundTileSet": [], "extraData": {} }
+      "world": {
+        "tileSet": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "                                                         r",
+          "                                                  nn  gggggg",
+          "                                             nnn      dddddd",
+          "                                        nnn           dddddd",
+          "                                 nnn                  dddddd",
+          "                          nnn                         dddddd",
+          "                   nnn                                dddddd",
+          "            nnn                                       dddddd",
+          "   S o                                                dddddd",
+          "ggggggggggggggggggggggggggggggggggggggggggggggggggggggdddddd",
+          "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+          "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+        ],
+        "backgroundTileSet": [""],
+        "extraData": {},
+        "background": "winter"
+      }
     },
     {
       "targetScores": [75, 60, 45],

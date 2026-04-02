@@ -58,7 +58,7 @@ function terrainDefinition() {
   ground.color = "SaddleBrown";
   ground.tile = "g";
   ground.img = grassTileImg;
-  ground.img.scale = gridSize / grassTileImg.width;
+  ground.img.scale = (gridSize / grassTileImg.width) * 1.001;
 
   dirt = new ground.Group();
   dirt.physics = "static";
