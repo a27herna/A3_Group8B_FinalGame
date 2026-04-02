@@ -108,6 +108,14 @@ function keyPressed() {
       initLevel(currentLevelIndex);
     }
   }
+  if (keyCode === ESCAPE) {
+    sceneManager = "levelSelect";
+  }
+
+  if (key === "`" && sceneManager == "levelSelect" && devCamSkip) {
+    playerSaveDataTemp = { BestTimes: [] };
+    storeItem("playerSaveData", playerSaveDataTemp);
+  }
 }
 
 function mousePressed() {
@@ -135,7 +143,7 @@ function initLevel(index) {
   currentLevel?.TileMap.delete();
   currentLevel?.backgroundTileMap.delete();
   world.gravity.y = 10;
-  mainPlayer.mainBody.friction = 1;
+  mainPlayer.mainBody.friction = 0;
 
   currentLevel = null;
   if (index == null) {

@@ -242,22 +242,23 @@ function levelComplete() {
   displaySimpleButton(width / 3, height - 60, 200, 80, () => {
     sceneManager = "levelSelect";
   });
-
   stroke("Black");
   strokeWeight(8);
   fill("white");
-  text("Next Level", (width / 3) * 2, height - 60);
+  text("Return to Menu", width / 3, height - 60);
 
   if (currentLevelIndex + 1 < levelData.levels.length) {
+    stroke("Black");
+    strokeWeight(5);
+    fill("Sienna");
     displaySimpleButton((width / 3) * 2, height - 60, 200, 80, () => {
       currentLevelIndex++;
       initLevel(currentLevelIndex);
     });
-
     stroke("Black");
     strokeWeight(8);
     fill("white");
-    text("Return to Menu", width / 3, height - 60);
+    text("Next Level", (width / 3) * 2, height - 60);
   }
   pop();
 }
