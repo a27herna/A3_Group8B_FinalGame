@@ -102,7 +102,7 @@ function keyPressed() {
   startMusicIfNeeded();
 
   if (key === "r" || key === "R") {
-    if (allowPlayerInput) {
+    if (allowPlayerInput || levelCompletedBool) {
       //this is a hack solution please fix
       initLevel(currentLevelIndex);
       initLevel(currentLevelIndex);

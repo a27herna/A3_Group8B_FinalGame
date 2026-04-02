@@ -32,7 +32,8 @@
           "dddddddddddddddddddddddddddddddd"
         ],
         "backgroundTileSet": [""],
-        "extraData": {}
+        "extraData": {},
+        "background": "winter"
       }
     },
     {

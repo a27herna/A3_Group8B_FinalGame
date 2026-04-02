@@ -110,9 +110,15 @@ function mainDisplay() {
   camera.off();
   push();
   imageMode(CENTER);
-  background1Img.resize(0, height);
+  if (currentLevel.background == "default") {
+    background1Img.resize(0, height);
+    image(background1Img, width / 2, height / 2);
+  } else if (currentLevel.background == "winter") {
+    backgroundWinterImg.resize(width, height);
+    image(backgroundWinterImg, width / 2, height / 2);
+  }
+
   background2Img.resize(0, height);
-  image(background1Img, width / 2, height / 2);
   image(background2Img, width / 2, height / 2);
   pop();
 

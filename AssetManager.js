@@ -9,9 +9,10 @@ let treeFullTileImg;
 let titleScreenImg;
 let background1Img;
 let background2Img;
-let background3Img;
+let backgroundWinterImg;
 let postOfficeImg;
 let recipient1Img;
+let recipient2Img;
 let playerWalkAni;
 let playerIdleAni;
 let playerJumpImpulseAni;
@@ -37,11 +38,13 @@ function initImageAssetFiles() {
   waterTileImg = loadImage("assets/images/water_tile.webp");
 
   background1Img = loadImage("assets/images/background_main.webp");
+  backgroundWinterImg = loadImage("assets/images/background_winter.png");
   background2Img = loadImage("assets/images/background_overlay.webp");
 
   postOfficeImg = loadImage("assets/images/mail_pickup.webp");
 
   recipient1Img = loadImage("assets/images/bat_house.webp");
+  recipient2Img = loadImage("assets/images/cave_house.png");
 
   kiwiSpriteSheet = loadImage("assets/images/kiwi_spritesheet.png");
 
@@ -58,6 +61,7 @@ function initSoundAssetFiles() {
 
   // - Ambiance -
   amibianceSound1 = loadSound("assets/sounds/general_ambiance1.wav");
+  //   amibianceSound1.setVolume(0.85);
 
   // - Game SFX -
   oopsPackageSound1 = loadSound("assets/sounds/oops_package_break1.wav");

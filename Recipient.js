@@ -15,7 +15,7 @@ function initRecipientObj() {
   recipient1Img.resize(0, objHeight * 1.5);
   RecipientObj.image = recipient1Img;
 
-  RecipientObj.image.offset.y = -recipient1Img.height / 6;
+  RecipientObj.image.offset.y = -recipient1Img.height / 6 + 5;
   // RecipientObj.image.scale = 0.5;
 
   RecipientObj.targetPackage = "basic";

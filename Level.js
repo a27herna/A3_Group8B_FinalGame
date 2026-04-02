@@ -11,6 +11,7 @@ let ground;
 let dirt;
 let bounce;
 let lilypad;
+let iceTile;
 let playerStart;
 
 let gridSize = 50;
@@ -94,6 +95,10 @@ function terrainDefinition() {
   oneWayPlatformCenter = new oneWayPlatform.Group();
   oneWayPlatformCenter.img = platformTileImg;
 
+  iceTile = new ground.Group();
+  iceTile.color = "LightBlue";
+  iceTile.tile = "z";
+
   VisualForegroundTile = new Group();
   VisualForegroundTile.physics = "NONE";
   VisualForegroundTile.width = gridSize;
@@ -127,7 +132,7 @@ class Level {
 
     */
 
-    // this.bg = json.world?.bg ?? [235, 235, 235];
+    this.background = json.world?.background ?? "default";
 
     this.tileSet = json.world?.tileSet ?? [
       "",
@@ -162,7 +167,7 @@ class Level {
       "                                                           nn         ",
       "                                                                nn    ",
       "   S  o                   o      _ _  _  _  _               n         ",
-      "gggggggggwwwwwwwwwwgggggggggggggwwwwwwwwwwwwwwgggggggggggggggggggggggg",
+      "zzzzzzzzzwwwwwwwwwwgggggggggggggwwwwwwwwwwwwwwgggggggggggggggggggggggg",
       "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
       "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
     ];
@@ -252,8 +257,8 @@ class Level {
     /*
     SPRITE_GROUP.forEach((element) => {
       element.y += -element.height / 2 + gridSize / 2;
-    })
-    */
+      })
+      */
 
     // Groups that need to be placed at the top of the grid
     // position at level creation
@@ -262,11 +267,18 @@ class Level {
     });
 
     /*
-    SPRITE_GROUP.forEach((element) => {
-      element.y -= -element.height / 2 + gridSize / 2;
-    })
-    */
+      SPRITE_GROUP.forEach((element) => {
+        element.y -= -element.height / 2 + gridSize / 2;
+        })
+        */
 
+    RecipientObj.forEach((element) => {
+      if (this.background == "winter") {
+        recipient2Img.resize(0, RecipientObj.height * 1.5);
+        element.image = recipient2Img;
+        element.image.offset.y = -12;
+      }
+    });
     // console.log(this.TileMap);
     // console.log(playerStart);
     this.levelBegin();
