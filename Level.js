@@ -58,6 +58,7 @@ function terrainDefinition() {
   ground.color = "SaddleBrown";
   ground.tile = "g";
   ground.img = grassTileImg;
+  // this is a hack solution
   ground.img.scale = (gridSize / grassTileImg.width) * 1.001;
 
   dirt = new ground.Group();
@@ -91,12 +92,15 @@ function terrainDefinition() {
   oneWayPlatform.tile = "n";
   oneWayPlatform.img = platformTileImg;
   oneWayPlatform.img.scale = gridSize / platformTileImg.width;
+  oneWayPlatform.img.scale.x = (gridSize / platformTileImg.width) * 1.2;
 
   oneWayPlatformCenter = new oneWayPlatform.Group();
   oneWayPlatformCenter.img = platformTileImg;
 
   iceTile = new ground.Group();
   iceTile.color = "LightBlue";
+  iceTile.image = iceyTileImg;
+  iceTile.img.scale = (gridSize / iceyTileImg.width) * 1.001;
   iceTile.tile = "z";
 
   VisualForegroundTile = new Group();

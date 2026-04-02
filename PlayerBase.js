@@ -89,8 +89,8 @@ class PlayerBase {
     this.carryonSensor = new Sprite(
       x,
       y - this.mainBody.hh - this.carryon.hh - size / 2,
-      size,
-      size,
+      size * 1.2,
+      size * 1.2,
     );
     this.carryonSensor.removeColliders();
     this.carryonSensor.mass = 0;
@@ -155,7 +155,19 @@ class PlayerBase {
     }
 
     // this.mainBody.scale.x = ;
-    this.mainBody.vel.x = dx * this.speed;
+
+    let iceSpeedModifer = 1.2;
+    if (this.floorSensor.overlapping(iceTile)) {
+      this.mainBody.friction = 0.1;
+      this.mainBody.vel.x = constrain(
+        this.mainBody.vel.x * 0.95 + (dx * this.speed) / 5,
+        -this.speed * iceSpeedModifer,
+        this.speed * iceSpeedModifer,
+      );
+    } else {
+      this.mainBody.vel.x = dx * this.speed;
+      this.mainBody.friction = 0;
+    }
     this.mainBody.pos.x = constrain(
       this.mainBody.pos.x,
       0,

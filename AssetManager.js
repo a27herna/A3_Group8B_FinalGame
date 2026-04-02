@@ -2,6 +2,7 @@ let platformTileImg;
 let grassTileImg;
 let dirtTileImg;
 let waterTileImg;
+let iceyTileImg;
 let treeBaseTileImg;
 let treeMidTileImg;
 let treeFullTileImg;
@@ -36,6 +37,7 @@ function initImageAssetFiles() {
   grassTileImg = loadImage("assets/images/grass_tile.png");
   dirtTileImg = loadImage("assets/images/dirt_tile.png");
   waterTileImg = loadImage("assets/images/water_tile.webp");
+  iceyTileImg = loadImage("assets/images/icey_ground_tile.png");
 
   background1Img = loadImage("assets/images/background_main.webp");
   backgroundWinterImg = loadImage("assets/images/background_winter.png");
