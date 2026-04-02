@@ -80,8 +80,8 @@ class PlayerBase {
     );
     this.floorSensor.removeColliders();
     this.floorSensor.mass = 0;
-    // this.floorSensor.visible = false;
-    this.floorSensor.debug = true;
+    this.floorSensor.visible = false;
+    // this.floorSensor.debug = true;
 
     this.floorJoiner = new GlueJoint(this.mainBody, this.floorSensor);
     this.floorJoiner.visible = false;
@@ -94,8 +94,8 @@ class PlayerBase {
     );
     this.carryonSensor.removeColliders();
     this.carryonSensor.mass = 0;
-    // this.carryonSensor.visible = false;
-    this.carryonSensor.debug = true;
+    this.carryonSensor.visible = false;
+    // this.carryonSensor.debug = true;
 
     this.carryonJoiner = new GlueJoint(this.mainBody, this.carryonSensor);
     this.carryonJoiner.visible = false;
