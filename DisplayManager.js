@@ -138,7 +138,30 @@ function displayHUD() {
   push();
   textSize(24);
   fill("white");
+  const packageBrokenSeverityLimitSmall = 2;
+  const packageBrokenSeverityLimit = 6;
+
+  fill("white");
   text("Time: " + timeWithPackage, 20, 10 + textSize());
+
+  if (packageBrokenCount > 0) {
+    fill(
+      255,
+      lerp(
+        255,
+        0,
+        min(packageBrokenCount, packageBrokenSeverityLimit) /
+          packageBrokenSeverityLimit,
+      ),
+      lerp(
+        255,
+        0,
+        min(packageBrokenCount, packageBrokenSeverityLimitSmall) /
+          packageBrokenSeverityLimitSmall,
+      ),
+    );
+  }
+
   text('Packages "lost": ' + packageBrokenCount, 20, 10 + textSize() * 2);
 
   // let restartButtonMargin = 60;
@@ -182,6 +205,10 @@ function displayRestartButton(x, y) {
 
 function levelComplete() {
   // noLoop();
+  if (!levelCompletedBool) {
+    levelCompleteSound.play();
+    levelCompletedBool = true;
+  }
   allowPlayerInput = false;
 
   allSprites.draw();
@@ -278,7 +305,7 @@ function drawLevelScore() {
 
   let completionTimeMin = int(currentTime / 60);
 
-  let completionTimeSec = int(currentTime);
+  let completionTimeSec = int(currentTime % 60);
   if (completionTimeSec < 10) {
     completionTimeSec = "0" + completionTimeSec;
   } else if (completionTimeSec < 1) {

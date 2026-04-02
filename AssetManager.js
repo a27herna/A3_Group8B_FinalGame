@@ -16,6 +16,7 @@ let playerWalkAni;
 let playerIdleAni;
 let playerJumpImpulseAni;
 let kiwiSpriteSheet;
+let package1Img;
 
 function initImageAssetFiles() {
   // let playerImg1 = loadImage("assets/kiwi_frame_1.webp");
@@ -37,17 +38,33 @@ function initImageAssetFiles() {
 
   background1Img = loadImage("assets/images/background_main.webp");
   background2Img = loadImage("assets/images/background_overlay.webp");
+
   postOfficeImg = loadImage("assets/images/mail_pickup.webp");
+
   recipient1Img = loadImage("assets/images/bat_house.webp");
+
   kiwiSpriteSheet = loadImage("assets/images/kiwi_spritesheet.png");
+
+  package1Img = loadImage("assets/images/package1.png");
 }
 
 let musicStarted = false;
 let generalMusic;
 let amibianceSound1;
+let oopsPackageSound1;
+let levelCompleteSound;
 function initSoundAssetFiles() {
   soundFormats("mp3", "wav");
+
+  // - Ambiance -
   amibianceSound1 = loadSound("assets/sounds/general_ambiance1.wav");
+
+  // - Game SFX -
+  oopsPackageSound1 = loadSound("assets/sounds/oops_package_break1.wav");
+  oopsPackageSound1.setVolume(0.075, 2);
+
+  levelCompleteSound = loadSound("assets/sounds/level_complete1.wav");
+  levelCompleteSound.setVolume(0.5);
 
   generalMusic = amibianceSound1;
 }

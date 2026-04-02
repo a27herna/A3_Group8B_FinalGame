@@ -51,6 +51,7 @@ function initPackageObj() {
       BrokenPackageObj.width / 4,
       BrokenPackageObj.height / 2,
     );
+    fill(64, 55, 53);
     triangle(
       -BrokenPackageObj.width / 2,
       BrokenPackageObj.height / 2,
@@ -59,6 +60,7 @@ function initPackageObj() {
       0,
       BrokenPackageObj.height / 2,
     );
+    fill(64, 55, 53);
     triangle(
       BrokenPackageObj.width / 2,
       BrokenPackageObj.height / 2,
@@ -77,25 +79,18 @@ function initPackageObj() {
   BasicBox.height = 30;
   BasicBox.packageType = "basic";
 
+  package1Img.resize(0, BasicBox.width);
+  BasicBox.image = package1Img;
+
   BasicBox.draw = function () {
     push();
 
     stroke("Black");
-    fill("Orange");
+    strokeWeight(3);
+    // fill(64, 55, 53);
 
     rect(0, 0, BasicBox.width, BasicBox.height);
-    line(
-      -BasicBox.width / 2,
-      -BasicBox.height / 2,
-      BasicBox.width / 2,
-      BasicBox.height / 2,
-    );
-    line(
-      -BasicBox.width / 2,
-      BasicBox.height / 2,
-      BasicBox.width / 2,
-      -BasicBox.height / 2,
-    );
+    image(BasicBox.image, 0, 0);
 
     pop();
   };
@@ -112,6 +107,7 @@ function createPackageObj(type) {
 
 let oopsPackage;
 function destroyPackage() {
+  oopsPackageSound1.play();
   oopsPackage = new BrokenPackageObj.Sprite(this.pos.x, this.pos.y);
   oopsPackage.y =
     (int(oopsPackage.y / gridSize) + 1) * gridSize - oopsPackage.hh;

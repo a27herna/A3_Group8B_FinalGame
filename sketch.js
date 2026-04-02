@@ -21,6 +21,8 @@ let cnv;
 
 let levelData;
 
+let levelCompletedBool = false;
+
 function preload() {
   getPlayerSaveData();
   console.log(playerSaveDataTemp);
@@ -128,6 +130,7 @@ function drawFrame() {
 
 function initLevel(index) {
   loop();
+  levelCompletedBool = false;
   removeRealTimeObjects();
   currentLevel?.TileMap.delete();
   currentLevel?.backgroundTileMap.delete();
