@@ -108,6 +108,7 @@ function drawFrame() {
   background(220);
 
   if (sceneManager == "levelSelect") {
+    world.gravity.y = 0;
     displayLevelSelect();
   } else if (sceneManager == "game") {
     mainDisplay();
@@ -122,6 +123,7 @@ function initLevel(index) {
   currentLevel?.TileMap.delete();
   currentLevel?.backgroundTileMap.delete();
   world.gravity.y = 10;
+  mainPlayer.mainBody.friction = 1;
 
   currentLevel = null;
   if (index == null) {

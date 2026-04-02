@@ -35,13 +35,14 @@ function displayLevelSelect() {
         fill("grey");
 
         if (mouseIsPressed) {
-          if (loopLevelIndex < levelData["levels"].length) {
+          if (loopLevelIndex < levelData.levels.length) {
+            currentLevelIndex = loopLevelIndex;
+            initLevel(currentLevelIndex);
+            // console.log(loopLevelIndex);
             sceneManager = "game";
-            console.log(loopLevelIndex);
-            initLevel(loopLevelIndex);
           } else if (loopLevelIndex == 14) {
-            sceneManager = "game";
             initLevel();
+            sceneManager = "game";
           }
         }
       }
@@ -65,6 +66,41 @@ function displayLevelSelect() {
           (r - floor(gridHeight / 2)) * gridYOffset +
           textSize() / 4,
       );
+
+      let starSize = 7;
+      let starSpacing = 25;
+
+      for (
+        let i = 0;
+        i < levelData.levels[loopLevelIndex]?.targetScores.length;
+        i++
+      ) {
+        let placementX =
+          width / 2 +
+          (c - floor(gridLength / 2)) * gridXOffset +
+          starSpacing * (i - 1);
+        let placementY =
+          height * 0.6 +
+          (r - floor(gridHeight / 2)) * gridYOffset +
+          boxSize / 4;
+        stroke("black");
+        strokeWeight(1);
+
+        if (
+          playerSaveDataTemp["BestTimes"][loopLevelIndex] <
+          levelData.levels[loopLevelIndex]?.targetScores[i]
+        ) {
+          fill("gold");
+        } else {
+          fill("white");
+        }
+        // drawStar(placementX, placementY, starSize, starSize * 1.75);
+
+        //   if (playerSaveDataTemp["BestTimes"][loopLevelIndex] < levelData[loopLevelIndex]?.targetScores[i]) {
+
+        //   }
+        drawStar(placementX, placementY, starSize, starSize * 1.75);
+      }
     }
   }
   pop();
@@ -87,6 +123,8 @@ function mainDisplay() {
 
   if (checkLevelComplete()) {
     levelComplete();
+    mainPlayer.mainBody.changeAni("idle");
+    mainPlayer.mainBody.friction = 1;
   } else {
     displayHUD();
   }
@@ -147,37 +185,34 @@ function displayHUD() {
   text("Time: " + timeWithPackage, 20, 10 + textSize());
   text('Packages "lost": ' + packageBrokenCount, 20, 10 + textSize() * 2);
 
+  // let restartButtonMargin = 60;
+  displayRestartButton(width - 60, height - 60);
+  pop();
+}
+
+function displayRestartButton(x, y) {
+  push();
   stroke("Black");
   strokeWeight(5);
   fill("Sienna");
-  let restartButtonMargin = 60;
-  let restartButtonX = width - restartButtonMargin;
-  let restartButtonY = height - restartButtonMargin;
   let restartButtonSize = 80;
-  circle(restartButtonX, restartButtonY, restartButtonSize);
+  circle(x, y, restartButtonSize);
 
   angleMode(RADIANS);
 
   strokeWeight(5);
   strokeCap(SQUARE);
-  arc(
-    restartButtonX,
-    restartButtonY,
-    restartButtonSize * 0.5,
-    restartButtonSize * 0.5,
-    HALF_PI,
-    TWO_PI,
-  );
+  arc(x, y, restartButtonSize * 0.5, restartButtonSize * 0.5, HALF_PI, TWO_PI);
 
   strokeCap(ROUND);
   fill("black");
   triangle(
-    restartButtonX,
-    restartButtonY + restartButtonSize / 2 / 2 - 10,
-    restartButtonX,
-    restartButtonY + restartButtonSize / 2 / 2 + 10,
-    restartButtonX + 15,
-    restartButtonY + restartButtonSize / 2 / 2,
+    x,
+    y + restartButtonSize / 2 / 2 - 10,
+    x,
+    y + restartButtonSize / 2 / 2 + 10,
+    x + 15,
+    y + restartButtonSize / 2 / 2,
   );
 
   // noStroke();
@@ -185,12 +220,14 @@ function displayHUD() {
   fill("white");
   textAlign(CENTER, CENTER);
   textSize(36);
-  text("R", restartButtonX, restartButtonY + 2);
+  text("R", x, y + 2);
   pop();
 }
 
 function levelComplete() {
-  noLoop();
+  // noLoop();
+  allowPlayerInput = false;
+
   allSprites.draw();
   push();
   fill(0, 0, 0, 255 * (3 / 4));
@@ -203,6 +240,51 @@ function levelComplete() {
   noStroke();
   text("Delivery Complete!", width / 2, height / 3);
   drawLevelScore();
+
+  displayRestartButton(width / 2, height - 60);
+
+  textAlign(CENTER, CENTER);
+  strokeJoin(ROUND);
+  textSize(24);
+
+  stroke("Black");
+  strokeWeight(5);
+  fill("Sienna");
+  displaySimpleButton(width / 3, height - 60, 200, 80, () => {
+    sceneManager = "levelSelect";
+  });
+  displaySimpleButton((width / 3) * 2, height - 60, 200, 80, () => {
+    currentLevelIndex++;
+    initLevel(currentLevelIndex);
+  });
+
+  stroke("Black");
+  strokeWeight(8);
+  fill("white");
+  text("Next Level", (width / 3) * 2, height - 60);
+  text("Return to Menu", width / 3, height - 60);
+  pop();
+}
+
+function displaySimpleButton(x, y, w, h, callback) {
+  push();
+  rectMode(CENTER);
+  rect(x, y, w, h, 10);
+
+  if (
+    mouseX > x - w / 2 &&
+    mouseX < x + w / 2 &&
+    mouseY > y - h / 2 &&
+    mouseY < y + h / 2
+  ) {
+    fill(170, 170, 170, 170);
+    rect(x, y, w, h, 10);
+    if (mouseIsPressed) {
+      callback();
+    }
+  }
+
+  rect;
   pop();
 }
 
@@ -210,7 +292,9 @@ function drawLevelScore() {
   let packagePentalty = 15;
 
   let currentTime = timeWithPackage + packagePentalty * packageBrokenCount;
-  let targetScores = levelData[currentLevelIndex]?.targetScores ?? [75, 60, 45];
+  let targetScores = levelData.levels[currentLevelIndex]?.targetScores ?? [
+    75, 60, 45,
+  ];
   let currentScore = 0;
 
   let starSpacing = 120;
@@ -320,3 +404,5 @@ function drawStar(x, y, radius1, radius2, npoints = 5) {
   pop();
 }
 // [1]
+
+function levelCompleteButtons() {}

@@ -73,7 +73,7 @@ function terrainDefinition() {
   platform.width = gridSize;
   platform.height = (gridSize * 1) / 5;
   platform.color = "magenta";
-  platform.tile = "p";
+  // platform.tile = "p";
 
   lilypad = new platform.Group();
   lilypad.height = (gridSize * 1) / 7.5;
