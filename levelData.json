@@ -3,7 +3,7 @@
 
   "levels": [
     {
-      "targetScores": [45, 30, 15],
+      "targetScores": [15, 10, 5],
       "world": {
         "tileSet": [
           "",
@@ -36,7 +36,7 @@
       }
     },
     {
-      "targetScores": [70, 50, 30],
+      "targetScores": [30, 20, 10],
       "world": {
         "tileSet": [
           "",
@@ -70,7 +70,7 @@
       }
     },
     {
-      "targetScores": [75, 60, 45],
+      "targetScores": [45, 30, 15],
       "world": {
         "tileSet": [
           "",
@@ -99,7 +99,7 @@
       }
     },
     {
-      "targetScores": [75, 60, 45],
+      "targetScores": [60, 40, 20],
       "world": {
         "tileSet": [
           "",
@@ -109,34 +109,34 @@
           "",
           "",
           "",
-          "                                                                      ",
-          "                                                                      ",
-          "                                                               r      ",
-          "                                                        nnnnnnnnnnnnn ",
-          "                                                                      ",
-          "                                                           nnn        ",
-          "                                                                      ",
-          "                                                               nnn    ",
-          "                                                                      ",
-          "                                                           nnn        ",
-          "                                                                      ",
-          "                                                               nnn    ",
-          "                                                           nn         ",
-          "                                                                nn    ",
-          "                                                           nn         ",
-          "                                                                nn    ",
-          "                                                           nn         ",
-          "                                                                nn    ",
-          "                                                           nn         ",
-          "                                                                nn    ",
-          "                                                           nn         ",
-          "                                                                nn    ",
-          "                                                           nn         ",
-          "                                                                nn    ",
-          "   S                      o      _ _  _  _  _               n         ",
-          "gggggggggwwwwwwwwwwgggggggggggggwwwwwwwwwwwwwwgggggggggggggggggggggggg",
-          "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
-          "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+          "                                                   ",
+          "                                                   ",
+          "                                            r      ",
+          "                                     nnnnnnnnnnnnn ",
+          "                                                   ",
+          "                                        nnn        ",
+          "                                                   ",
+          "                                            nnn    ",
+          "                                                   ",
+          "                                        nnn        ",
+          "                                                   ",
+          "                                            nnn    ",
+          "                                        nn         ",
+          "                                             nn    ",
+          "                                        nn         ",
+          "                                             nn    ",
+          "                                        nn         ",
+          "                                             nn    ",
+          "                                        nn         ",
+          "                                             nn    ",
+          "                                        nn         ",
+          "                                             nn    ",
+          "                                        nn         ",
+          "                                             nn    ",
+          "  S    o      _ _  _  _  _               n         ",
+          "gggggggggggggwwwwwwwwwwwwwwgggggggggggggggggggggggg",
+          "ddddddddddddddddddddddddddddddddddddddddddddddddddd",
+          "ddddddddddddddddddddddddddddddddddddddddddddddddddd"
         ],
         "backgroundTileSet": [
           "",

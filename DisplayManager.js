@@ -136,6 +136,40 @@ function mainDisplay() {
   }
 }
 
+function displayRestartButton(x, y) {
+  push();
+  stroke("Black");
+  strokeWeight(5);
+  fill("Sienna");
+  let restartButtonSize = 80;
+  circle(x, y, restartButtonSize);
+
+  angleMode(RADIANS);
+
+  strokeWeight(5);
+  strokeCap(SQUARE);
+  arc(x, y, restartButtonSize * 0.5, restartButtonSize * 0.5, HALF_PI, TWO_PI);
+
+  strokeCap(ROUND);
+  fill("black");
+  triangle(
+    x,
+    y + restartButtonSize / 2 / 2 - 10,
+    x,
+    y + restartButtonSize / 2 / 2 + 10,
+    x + 15,
+    y + restartButtonSize / 2 / 2,
+  );
+
+  // noStroke();
+  strokeWeight(5);
+  fill("white");
+  textAlign(CENTER, CENTER);
+  textSize(36);
+  text("R", x, y + 2);
+  pop();
+}
+
 function displayHUD() {
   if (currPackage != null) {
     timeWithPackage = round(world.realTime - packageBornTime, 2);
@@ -227,10 +261,10 @@ function levelComplete() {
 
   fill("white");
   noStroke();
-  text("Delivery Complete!", width / 2, height / 3);
+  text("Delivery Complete!", width / 2, height / 5.5);
   drawLevelScore();
 
-  displayRestartButton(width / 2, height - 60);
+  displayRestartButton(width / 2, height - 120);
 
   textAlign(CENTER, CENTER);
   strokeJoin(ROUND);
@@ -239,26 +273,26 @@ function levelComplete() {
   stroke("Black");
   strokeWeight(5);
   fill("Sienna");
-  displaySimpleButton(width / 3, height - 60, 200, 80, () => {
+  displaySimpleButton(width / 3, height - 120, 200, 80, () => {
     sceneManager = "levelSelect";
   });
   stroke("Black");
   strokeWeight(8);
   fill("white");
-  text("Return to Menu", width / 3, height - 60);
+  text("Return to Menu", width / 3, height - 120);
 
   if (currentLevelIndex + 1 < levelData.levels.length) {
     stroke("Black");
     strokeWeight(5);
     fill("Sienna");
-    displaySimpleButton((width / 3) * 2, height - 60, 200, 80, () => {
+    displaySimpleButton((width / 3) * 2, height - 120, 200, 80, () => {
       currentLevelIndex++;
       initLevel(currentLevelIndex);
     });
     stroke("Black");
     strokeWeight(8);
     fill("white");
-    text("Next Level", (width / 3) * 2, height - 60);
+    text("Next Level", (width / 3) * 2, height - 120);
   }
   pop();
 }
@@ -286,7 +320,7 @@ function displaySimpleButton(x, y, w, h, callback) {
 }
 
 function drawLevelScore() {
-  let packagePentalty = 15;
+  let packagePentalty = 5;
 
   let currentTime = timeWithPackage + packagePentalty * packageBrokenCount;
   let targetScores = levelData.levels[currentLevelIndex]?.targetScores ?? [
@@ -299,7 +333,7 @@ function drawLevelScore() {
 
   for (let i = 0; i < targetScores.length; i++) {
     let placementX = width / 2 + starSpacing * (i - 1);
-    let placementY = height * 0.45;
+    let placementY = height * 0.318;
 
     stroke("black");
     strokeWeight(2);
@@ -309,7 +343,7 @@ function drawLevelScore() {
     } else {
       fill("white");
     }
-    drawStar(placementX, height * 0.45, starSize, starSize * 1.75);
+    drawStar(placementX, height * 0.318, starSize, starSize * 1.75);
 
     textSize(24);
     noStroke();
@@ -370,13 +404,13 @@ function drawLevelScore() {
       ":" +
       completionTimeMil,
     width / 2,
-    height * 0.6,
+    height * 0.48,
   );
 
   text(
     " - Record Time - \n" + bestTimeMin + ":" + bestTimeSec + ":" + bestTimeMil,
     width / 2,
-    height * 0.75,
+    height * 0.62,
   );
 }
 
