@@ -20,6 +20,11 @@ let playerJumpImpulseAni;
 let kiwiSpriteSheet;
 let package1Img;
 
+let helpSignImg1;
+let helpSignImg2;
+let helpSignImg3;
+let helpSignImg4;
+
 function initImageAssetFiles() {
   // let playerImg1 = loadImage("assets/kiwi_frame_1.webp");
   // let playerImg2 = loadImage("assets/kiwi_frame_2.webp");
@@ -70,6 +75,11 @@ function initImageAssetFiles() {
 
   levelSelectImg = loadImage("assets/images/level_select.png");
   levelCompleteImg = loadImage("assets/images/level_complete.png");
+
+  helpSignImg1 = loadImage("assets/images/instructions1.png");
+  helpSignImg2 = loadImage("assets/images/instructions3.png");
+  helpSignImg3 = loadImage("assets/images/instructions2.png");
+  helpSignImg4 = loadImage("assets/images/instructions4.png");
 }
 
 let SlackeyFont;

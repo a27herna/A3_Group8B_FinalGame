@@ -26,17 +26,17 @@
           "",
           "",
           "",
-          "    S o                  r      ",
-          "gggggggggggggggggggggggggggggggg",
-          "dddddddddddddddddddddddddddddddd",
-          "dddddddddddddddddddddddddddddddd"
+          "    S   1    2    o               r       ",
+          "gggggggggggggggggggggggggggggggggggggggggg",
+          "dddddddddddddddddddddddddddddddddddddddddd",
+          "dddddddddddddddddddddddddddddddddddddddddd"
         ],
         "backgroundTileSet": [""],
         "extraData": {}
       }
     },
     {
-      "targetScores": [30, 20, 10],
+      "targetScores": [30, 20, 15],
       "world": {
         "tileSet": [
           "",
@@ -58,19 +58,44 @@
           "",
           "",
           "",
-          "                          nn         nn           nn               ",
+          "                          nn         nn           nn              ",
           "    S o                                                     r     ",
           "gggggggggwwwwwwwwwwwwgggwwwwwwgggggwwwwwwgggggggwwwwwwgggggggggggg",
           "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
           "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
         ],
-        "backgroundTileSet": [""],
+        "backgroundTileSet": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "                                                                  ",
+          "                                                                  ",
+          "              3                                                   ",
+          "                                                                  ",
+          "                                                                  "
+        ],
         "extraData": {},
         "background": "winter"
       }
     },
     {
-      "targetScores": [45, 30, 15],
+      "targetScores": [45, 30, 20],
       "world": {
         "tileSet": [
           "",
@@ -86,7 +111,7 @@
           "                                        nnn       dd   dddddd",
           "                                 nnn              dd   dddddd",
           "                          nnn                     dd   dddddd",
-          "                   nnn                            dd   dddddd",
+          "            4      nnn                            dd   dddddd",
           "           zzz                                    dd   dddddd",
           "   S o     ddd                                         dddddd",
           "gggggggggggdddggggggggggggggzzzzzzzzzzzzzzzgggwwwwwwwwwdddddd",
@@ -99,7 +124,7 @@
       }
     },
     {
-      "targetScores": [60, 40, 20],
+      "targetScores": [60, 40, 25],
       "world": {
         "tileSet": [
           "",

@@ -14,6 +14,12 @@ let lilypad;
 let iceTile;
 let playerStart;
 
+let helpSignGroup;
+let helpSignV1;
+let helpSignV2;
+let helpSignV3;
+let helpSignV4;
+
 let gridSize = 50;
 
 function backgroundTerrainDefinition() {
@@ -45,6 +51,39 @@ function backgroundTerrainDefinition() {
   treeFullTileImg.resize(0, treeFullTile.height);
   treeFullTile.img = treeFullTileImg;
   treeFullTile.img.offset.y = -treeFullTile.height / 2 + 180;
+
+  helpSignGroup = new backgroundTile.Group();
+  helpSignGroup.width = gridSize * 4;
+  helpSignGroup.height = gridSize * 4;
+  // helpSignGroup.debug = true;
+
+  helpSignV1 = new helpSignGroup.Group();
+  // helpSignImg1.resize(helpSignV1.width, 0);
+  helpSignV1.img = helpSignImg1;
+  helpSignV1.img.scale = helpSignGroup.height / helpSignImg1.height;
+  helpSignV1.img.offset.y = helpSignGroup.height * 0.5;
+  helpSignV1.tile = "1";
+
+  helpSignV2 = new helpSignGroup.Group();
+  // helpSignImg1.resize(helpSignV1.width, 0);
+  helpSignV2.img = helpSignImg2;
+  helpSignV2.img.scale = helpSignGroup.height / helpSignImg2.height;
+  helpSignV2.img.offset.y = helpSignGroup.height * 0.5;
+  helpSignV2.tile = "2";
+
+  helpSignV3 = new helpSignGroup.Group();
+  // helpSignImg1.resize(helpSignV1.width, 0);
+  helpSignV3.img = helpSignImg3;
+  helpSignV3.img.scale = helpSignGroup.height / helpSignImg3.height;
+  helpSignV3.img.offset.y = helpSignGroup.height * 0.5;
+  helpSignV3.tile = "3";
+
+  helpSignV4 = new helpSignGroup.Group();
+  // helpSignImg1.resize(helpSignV1.width, 0);
+  helpSignV4.img = helpSignImg4;
+  helpSignV4.img.scale = helpSignGroup.height / helpSignImg4.height;
+  helpSignV4.img.offset.y = helpSignGroup.height * 0.5;
+  helpSignV4.tile = "4";
 }
 
 function terrainDefinition() {
@@ -254,6 +293,9 @@ class Level {
       element.y += -element.height / 2 + gridSize / 2;
     });
     lilypad.forEach((element) => {
+      element.y += -element.height / 2 + gridSize / 2;
+    });
+    helpSignGroup.forEach((element) => {
       element.y += -element.height / 2 + gridSize / 2;
     });
 
