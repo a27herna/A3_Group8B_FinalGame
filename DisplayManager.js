@@ -209,6 +209,7 @@ function displayRestartButton(x, y) {
     restartButtonSize,
     restartButtonSize,
   );
+  pop();
 }
 
 function levelComplete() {
