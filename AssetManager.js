@@ -89,8 +89,8 @@ function initSoundAssetFiles() {
   //   amibianceSound1.setVolume(0.85);
 
   // - Game SFX -
-  oopsPackageSound1 = loadSound("assets/sounds/oops_package_break1.wav");
-  oopsPackageSound1.setVolume(0.075, 2);
+  oopsPackageSound1 = loadSound("assets/sounds/Cardboard Box SFX 2.wav");
+  oopsPackageSound1.setVolume(0.25, 2);
 
   levelCompleteSound = loadSound("assets/sounds/level_complete1.wav");
   levelCompleteSound.setVolume(0.5);
