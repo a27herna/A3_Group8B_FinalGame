@@ -51,6 +51,29 @@ function initImageAssetFiles() {
   kiwiSpriteSheet = loadImage("assets/images/kiwi_spritesheet.png");
 
   package1Img = loadImage("assets/images/package1.png");
+
+  instruction1Img = loadImage("assets/images/instructions1.png");
+  instruction2Img = loadImage("assets/images/instructions2.png");
+  instruction3Img = loadImage("assets/images/instructions3.png");
+  instruction4Img = loadImage("assets/images/instructions4.png");
+
+  buttonRect1Img = loadImage("assets/images/button_rect.png");
+  buttonRect2Img = loadImage("assets/images/button_rect_pressed.png");
+  buttonSquare1Img = loadImage("assets/images/button_square.png");
+  buttonSquare2Img = loadImage("assets/images/button_square_pressed.png");
+  buttonRestart1Img = loadImage("assets/images/restart.png");
+  buttonRestart2Img = loadImage("assets/images/restart_pressed.png");
+
+  star1Img = loadImage("assets/images/star.png");
+  star2Img = loadImage("assets/images/star_earned.png");
+
+  levelSelectImg = loadImage("assets/images/level_select.png");
+  levelCompleteImg = loadImage("assets/images/level_complete.png");
+}
+
+let SlackeyFont;
+function preload() {
+  SlackeyFont = loadFont("Slackey-Regular.ttf");
 }
 
 let musicStarted = false;
