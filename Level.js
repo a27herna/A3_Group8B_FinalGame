@@ -88,7 +88,6 @@ function terrainDefinition() {
   oneWayPlatform = new platform.Group();
   oneWayPlatform.physics = "NONE";
   oneWayPlatform.color = "teal";
-  // Move down when anna is down new
   oneWayPlatform.tile = "n";
   oneWayPlatform.img = platformTileImg;
   oneWayPlatform.img.scale = gridSize / platformTileImg.width;
