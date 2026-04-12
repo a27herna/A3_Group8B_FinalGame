@@ -61,6 +61,7 @@ function initImageAssetFiles() {
   buttonRect2Img = loadImage("assets/images/button_rect_pressed.png");
   buttonSquare1Img = loadImage("assets/images/button_square.png");
   buttonSquare2Img = loadImage("assets/images/button_square_pressed.png");
+  buttonSquare3Img = loadImage("assets/images/button_square_disabled.png");
   buttonRestart1Img = loadImage("assets/images/restart.png");
   buttonRestart2Img = loadImage("assets/images/restart_pressed.png");
 
@@ -89,7 +90,7 @@ function initSoundAssetFiles() {
   //   amibianceSound1.setVolume(0.85);
 
   // - Game SFX -
-  oopsPackageSound1 = loadSound("assets/sounds/Cardboard Box SFX 2.wav");
+  oopsPackageSound1 = loadSound("assets/sounds/Cardboard_Box_SFX_2.wav");
   oopsPackageSound1.setVolume(0.25, 2);
 
   levelCompleteSound = loadSound("assets/sounds/level_complete1.wav");
