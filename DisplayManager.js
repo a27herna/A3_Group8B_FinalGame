@@ -8,17 +8,20 @@ function displayLevelSelect() {
 
   push();
   imageMode(CENTER);
-  titleScreenImg.resize(width, 0);
-  image(titleScreenImg, width / 2, height * 0.62);
+  background1Img.resize(0, height);
+  image(background1Img, width / 2, height / 2);
+
+  levelSelectImg.resize(0, height);
+  image(levelSelectImg, width / 2, height / 2);
 
   for (let r = 0; r < gridHeight; r++) {
     for (let c = 0; c < gridLength; c++) {
       let loopLevelIndex = c + r * gridLength;
 
       if (loopLevelIndex < levelData["levels"].length) {
-        fill("white");
+        boxState = "real";
       } else {
-        fill("darkgrey");
+        boxState = "null";
       }
       if (
         mouseX >=
@@ -32,7 +35,7 @@ function displayLevelSelect() {
         mouseY <=
           height * 0.6 + (r - floor(gridHeight / 2)) * gridYOffset + boxSize / 2
       ) {
-        fill("grey");
+        boxState = "pressed";
 
         if (mouseIsPressed) {
           if (loopLevelIndex < levelData.levels.length) {
@@ -47,14 +50,34 @@ function displayLevelSelect() {
         }
       }
 
-      rectMode(CENTER);
-      rect(
-        width / 2 + (c - floor(gridLength / 2)) * gridXOffset,
-        height * 0.6 + (r - floor(gridHeight / 2)) * gridYOffset,
-        boxSize,
-        boxSize,
-        boxSize / 20,
-      );
+      if (boxState == "real") {
+        image(
+          buttonSquare1Img,
+          width / 2 + (c - floor(gridLength / 2)) * gridXOffset,
+          height * 0.6 + (r - floor(gridHeight / 2)) * gridYOffset,
+          boxSize,
+          boxSize,
+          boxSize / 20,
+        );
+      } else if (boxState == "null") {
+        image(
+          buttonSquare3Img,
+          width / 2 + (c - floor(gridLength / 2)) * gridXOffset,
+          height * 0.6 + (r - floor(gridHeight / 2)) * gridYOffset,
+          boxSize,
+          boxSize,
+          boxSize / 20,
+        );
+      } else {
+        image(
+          buttonSquare2Img,
+          width / 2 + (c - floor(gridLength / 2)) * gridXOffset,
+          height * 0.6 + (r - floor(gridHeight / 2)) * gridYOffset,
+          boxSize,
+          boxSize,
+          boxSize / 20,
+        );
+      }
 
       fill("black");
       textAlign(CENTER);
