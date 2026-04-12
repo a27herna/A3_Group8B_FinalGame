@@ -8,7 +8,6 @@ function displayLevelSelect() {
 
   push();
   imageMode(CENTER);
-  textFont(SlackeyFont);
   titleScreenImg.resize(width, 0);
   image(titleScreenImg, width / 2, height * 0.62);
 
@@ -59,6 +58,7 @@ function displayLevelSelect() {
 
       fill("black");
       textAlign(CENTER);
+      textFont(SlackeyFont);
       textSize(24);
       text(
         1 + loopLevelIndex,
@@ -68,7 +68,7 @@ function displayLevelSelect() {
           textSize() / 4,
       );
 
-      let starSize = 7;
+      let starSize = 20;
       let starSpacing = 25;
 
       for (
@@ -91,16 +91,15 @@ function displayLevelSelect() {
           playerSaveDataTemp["BestTimes"][loopLevelIndex] <
           levelData.levels[loopLevelIndex]?.targetScores[i]
         ) {
-          fill("gold");
+          image(star2Img, placementX, placementY, starSize, starSize);
         } else {
-          fill("white");
+          image(star1Img, placementX, placementY, starSize, starSize);
         }
         // drawStar(placementX, placementY, starSize, starSize * 1.75);
 
         //   if (playerSaveDataTemp["BestTimes"][loopLevelIndex] < levelData[loopLevelIndex]?.targetScores[i]) {
 
         //   }
-        drawStar(placementX, placementY, starSize, starSize * 1.75);
       }
     }
   }
