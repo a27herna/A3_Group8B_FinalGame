@@ -159,40 +159,6 @@ function mainDisplay() {
   }
 }
 
-function displayRestartButton(x, y) {
-  push();
-  stroke("Black");
-  strokeWeight(5);
-  fill("Sienna");
-  let restartButtonSize = 80;
-  circle(x, y, restartButtonSize);
-
-  angleMode(RADIANS);
-
-  strokeWeight(5);
-  strokeCap(SQUARE);
-  arc(x, y, restartButtonSize * 0.5, restartButtonSize * 0.5, HALF_PI, TWO_PI);
-
-  strokeCap(ROUND);
-  fill("black");
-  triangle(
-    x,
-    y + restartButtonSize / 2 / 2 - 10,
-    x,
-    y + restartButtonSize / 2 / 2 + 10,
-    x + 15,
-    y + restartButtonSize / 2 / 2,
-  );
-
-  // noStroke();
-  strokeWeight(5);
-  fill("white");
-  textAlign(CENTER, CENTER);
-  textSize(36);
-  text("R", x, y + 2);
-  pop();
-}
-
 function displayHUD() {
   if (currPackage != null) {
     timeWithPackage = round(world.realTime - packageBornTime, 2);
@@ -235,36 +201,14 @@ function displayHUD() {
 
 function displayRestartButton(x, y) {
   push();
-  stroke("Black");
-  strokeWeight(5);
-  fill("Sienna");
-  let restartButtonSize = 80;
-  circle(x, y, restartButtonSize);
-
-  angleMode(RADIANS);
-
-  strokeWeight(5);
-  strokeCap(SQUARE);
-  arc(x, y, restartButtonSize * 0.5, restartButtonSize * 0.5, HALF_PI, TWO_PI);
-
-  strokeCap(ROUND);
-  fill("black");
-  triangle(
-    x,
-    y + restartButtonSize / 2 / 2 - 10,
-    x,
-    y + restartButtonSize / 2 / 2 + 10,
-    x + 15,
-    y + restartButtonSize / 2 / 2,
+  let restartButtonSize = 90;
+  image(
+    buttonRestart1Img,
+    x - restartButtonSize / 2,
+    y - restartButtonSize / 2,
+    restartButtonSize,
+    restartButtonSize,
   );
-
-  // noStroke();
-  strokeWeight(5);
-  fill("white");
-  textAlign(CENTER, CENTER);
-  textSize(36);
-  text("R", x, y + 2);
-  pop();
 }
 
 function levelComplete() {
@@ -277,23 +221,23 @@ function levelComplete() {
 
   allSprites.draw();
   push();
-  fill(0, 0, 0, 255 * (3 / 4));
-  rect(0, 0, width, height);
 
-  textSize(50);
+  levelCompleteImg.resize(0, height);
+  image(levelCompleteImg, 0, 0);
+
+  textSize(40);
   textFont(SlackeyFont);
   textAlign(CENTER);
 
   fill("white");
   noStroke();
-  text("Delivery Complete!", width / 2, height / 5.5);
   drawLevelScore();
 
   displayRestartButton(width / 2, height - 120);
 
   textAlign(CENTER, CENTER);
   strokeJoin(ROUND);
-  textSize(24);
+  textSize(18);
 
   stroke("Black");
   strokeWeight(5);
@@ -324,8 +268,7 @@ function levelComplete() {
 
 function displaySimpleButton(x, y, w, h, callback) {
   push();
-  rectMode(CENTER);
-  rect(x, y, w, h, 10);
+  imageMode(CENTER);
 
   if (
     mouseX > x - w / 2 &&
@@ -333,11 +276,12 @@ function displaySimpleButton(x, y, w, h, callback) {
     mouseY > y - h / 2 &&
     mouseY < y + h / 2
   ) {
-    fill(170, 170, 170, 170);
-    rect(x, y, w, h, 10);
+    image(buttonRect2Img, x, y, w, h);
     if (mouseIsPressed) {
       callback();
     }
+  } else {
+    image(buttonRect1Img, x, y, w, h);
   }
 
   rect;
@@ -354,7 +298,7 @@ function drawLevelScore() {
   let currentScore = 0;
 
   let starSpacing = 120;
-  let starSize = 30;
+  let starSize = 100;
 
   for (let i = 0; i < targetScores.length; i++) {
     let placementX = width / 2 + starSpacing * (i - 1);
@@ -364,15 +308,26 @@ function drawLevelScore() {
     strokeWeight(2);
     if (currentTime < targetScores[i]) {
       currentScore++;
-      fill("gold");
+      image(
+        star2Img,
+        placementX - starSize / 2,
+        placementY - starSize / 2,
+        starSize,
+        starSize,
+      );
     } else {
-      fill("white");
+      image(
+        star1Img,
+        placementX - starSize / 2,
+        placementY - starSize / 2,
+        starSize,
+        starSize,
+      );
     }
-    drawStar(placementX, height * 0.318, starSize, starSize * 1.75);
 
     textSize(24);
     noStroke();
-    fill("black");
+    fill("white");
     text(targetScores[i] + "s", placementX, placementY + textSize() / 4);
   }
 
