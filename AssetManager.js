@@ -72,8 +72,8 @@ function initImageAssetFiles() {
 }
 
 let SlackeyFont;
-function preload() {
-  SlackeyFont = loadFont("Slackey-Regular.ttf");
+function initFontFiles() {
+  SlackeyFont = loadFont("assets/fonts/Slackey-Regular.ttf");
 }
 
 let musicStarted = false;

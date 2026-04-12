@@ -8,6 +8,7 @@ function displayLevelSelect() {
 
   push();
   imageMode(CENTER);
+  textFont(SlackeyFont);
   titleScreenImg.resize(width, 0);
   image(titleScreenImg, width / 2, height * 0.62);
 
@@ -177,6 +178,7 @@ function displayHUD() {
 
   push();
   textSize(24);
+  textFont(SlackeyFont);
   fill("white");
   const packageBrokenSeverityLimitSmall = 2;
   const packageBrokenSeverityLimit = 6;
@@ -257,6 +259,7 @@ function levelComplete() {
   rect(0, 0, width, height);
 
   textSize(50);
+  textFont(SlackeyFont);
   textAlign(CENTER);
 
   fill("white");

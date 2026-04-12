@@ -32,6 +32,7 @@ function preload() {
 
   initImageAssetFiles();
   initSoundAssetFiles();
+  initFontFiles();
 }
 
 function setup() {
