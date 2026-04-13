@@ -28,6 +28,7 @@ Group 8B
 > Interact with the recipient to deliver a package.
 > Press `Z` to reset the level and your time.
 > Click with the mouse to navigate on-screen menus.
+> Press `ESC` to return to level select.
 
 ---
 
@@ -86,41 +87,32 @@ When it came to level design, play testers expressed wanting more challenge in v
 > - `star_earned.png` (created in Clip Studio Paint, Original artwork)
 > - `star.png` (created in Clip Studio Paint, Original artwork)
 
-> - `Slackey-Regular.tff` [2]
-> - `KDS_BGD Music Loop.wav` (Taken from freesound.org, edited in Davinci Resolve) [4] [6] 
-> - `Box Drop SFX.wav` (Taken from freesound.org, edited in Davinci Resolve) [5]
-> - `Cardboard Box SFX 2` (Taken from freesound.org, edited in Davinci Resolve) [1]
+> - `Slackey-Regular.tff` (Taken from Google Fonts) [1]
+> - `Carboard_Box_SFX_2.wav` (Taken from freesound.org, edited in Davinci Resolve) [2]
+> - `general_ambiance1.wav` (Taken from freesound.org, edited in Davinci Resolve) [3] [4]
+> - `level_complete1.wav` (Taken from freesound.org, edited in Davinci Resolve) [5]
+> - `oops_package_break1` (Taken from freesound.org, edited in Davinci Resolve) [6]
 
-> - `[1]` Drain Ben. 2019. Cardboard_Impact_02.wav. freesound.org. Retrieved from https://freesound.org/people/BenDrain/sounds/487832/
-> - `[2]` Goldswain Bevan . running leafy area loop.wav. freesound.org. Retrieved from https://freesound.org/people/bevangoldswain/sounds/54780/
-> - `[3]` Araujo Gabriel. 2014. Powerup/success.wav. freesound.org. Retrieved from https://freesound.org/people/GabrielAraujo/sounds/242501/
-> - `[4]` Abel Kjartan. 2020. Altweibersommer: A Mellow and Ambient Soundscape. freesound.org. Retrieved from https://freesound.org/people/kjartan_abel/sounds/540908/
-> - `[5]` laft2k. 2013. Cardboard Boxed and Glass Smash. freesound.org. Retrieved from https://freesound.org/people/laft2k/sounds/197261/
-> - `[6]` Roubignolle. Nuit-Amb animaux.aif. freesound.org. Retrieved from https://freesound.org/people/roubignolle/sounds/34701/
+> - `[1]` Sideshow. Slackey. Google Fonts. Retrieved April 12, 2026 from https://fonts.google.com/specimen/Slackey
+> - `[2]` Drain Ben. 2019. Cardboard_Impact_02.wav. freesound.org. Retrieved from https://freesound.org/people/BenDrain/sounds/487832/
+> - `[3]` Abel Kjartan. 2020. Altweibersommer: A Mellow and Ambient Soundscape. freesound.org. Retrieved from https://freesound.org/people/kjartan_abel/sounds/540908/
+> - `[4]` Roubignolle. Nuit-Amb animaux.aif. freesound.org. Retrieved from https://freesound.org/people/roubignolle/sounds/34701/
+> - `[5]` Araujo Gabriel. 2014. Powerup/success.wav. freesound.org. Retrieved from https://freesound.org/people/GabrielAraujo/sounds/242501/
+> - `[6]` laft2k. 2013. Cardboard Boxed and Glass Smash. freesound.org. Retrieved from https://freesound.org/people/laft2k/sounds/197261/
 
 ---
 
 ## References
 
-> - `[7]` www.dynamo6.com. Te Aka Māori Dictionary. Te Aka Māori Dictionary. Retrieved April 12, 2026 from https://www.maoridictionary.co.nz/
-
-> - `[8]` www.dynamo6.com. Te Aka Māori Dictionary. Te Aka Māori Dictionary. Retrieved April 12, 2026 from https://www.maoridictionary.co.nz/
-
-> - `[9]` 2018. Wild Nightlife | Forest and Bird. Retrieved April 12, 2026 from https://www.forestandbird.org.nz/resources/wild-nightlife
-
-> - `[10]` Nocturnal Wildlife Encounters – sanctuary.org.nz. Retrieved April 12, 2026 from https://sanctuary.org.nz/nocturnal-wildlife-encounters/
-
-
 ### In-text
 
-> `[12]` p5js.org. Star - example | p5.js. p5js.org. Retrieved March 12, 2026 from https://archive.p5js.org/examples/form-star.html
-> `[13]` Sideshow. Slackey. Google Fonts. Retrieved April 12, 2026 from https://fonts.google.com/specimen/Slackey
+> `[1]` p5js.org. Star - example | p5.js. p5js.org. Retrieved March 12, 2026 from https://archive.p5js.org/examples/form-star.html
 
 ### Inspiration
 
 > Rodrigo Monteiro. 2012. The guide to implementing 2D platformers. (May 2012). Retrieved March 12, 2026 from http://higherorderfun.com/blog/2012/05/20/the-guide-to-implementing-2d-platformers/
 > q5play.org. 2023. Platformer | p5play. Game [Web Browser]. (17 March 2023). q5play.org. Last played March 12, 2026.
-> Freesound. Freesound. Retrieved from https://freesound.org 
+> Freesound. Freesound. Retrieved from https://freesound.org
 
 ### Research
 
@@ -128,8 +120,14 @@ When it came to level design, play testers expressed wanting more challenge in v
 
 > Congenital Limb Differences | Boston Children’s Hospital. Retrieved March 9, 2026 from https://www.childrenshospital.org/conditions-treatments/congenital-limb-differences
 
+> www.dynamo6.com. Te Aka Māori Dictionary. Te Aka Māori Dictionary. Retrieved April 12, 2026 from https://www.maoridictionary.co.nz/
+
 > Health Social Sciences. LibGuides: Limb Difference: Home. Retrieved March 11, 2026 from https://guides.library.illinois.edu/c.php?g=651961&p=4573025
 
 > Leen Jabban, Benjamin W. Metcalfe, Jonathan Raines, Dingguo Zhang, and Ben Ainsworth. 2022. Experience of adults with upper-limb difference and their views on sensory feedback for prostheses: a mixed methods study. J Neuroeng Rehabil 19, (July 2022), 80. https://doi.org/10.1186/s12984-022-01054-y
+
+> Nocturnal Wildlife Encounters – sanctuary.org.nz. Retrieved April 12, 2026 from https://sanctuary.org.nz/nocturnal-wildlife-encounters/
+
+> 2018. Wild Nightlife | Forest and Bird. Retrieved April 12, 2026 from https://www.forestandbird.org.nz/resources/wild-nightlife
 
 ---
