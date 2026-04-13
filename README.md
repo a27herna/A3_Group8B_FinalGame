@@ -96,6 +96,15 @@ When it came to level design, play testers expressed wanting more challenge in v
 
 > `[1]` p5js.org. Star - example | p5.js. p5js.org. Retrieved March 12, 2026 from https://archive.p5js.org/examples/form-star.html
 > `[2]` Sideshow. Slackey. Google Fonts. Retrieved April 12, 2026 from https://fonts.google.com/specimen/Slackey
+>'[3]' www.dynamo6.com. Te Aka Māori Dictionary. Te Aka Māori Dictionary. Retrieved April 12, 2026 from https://www.maoridictionary.co.nz/
+
+>'[4]' www.dynamo6.com. Te Aka Māori Dictionary. Te Aka Māori Dictionary. Retrieved April 12, 2026 from https://www.maoridictionary.co.nz/
+
+>'[5]' 2018. Wild Nightlife | Forest and Bird. Retrieved April 12, 2026 from https://www.forestandbird.org.nz/resources/wild-nightlife
+
+>'[6]' Nocturnal Wildlife Encounters – sanctuary.org.nz. Retrieved April 12, 2026 from https://sanctuary.org.nz/nocturnal-wildlife-encounters/
+
+>'[7]' Freesound. Freesound. Retrieved from https://freesound.org
 
 ### Inspiration
 
