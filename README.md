@@ -87,6 +87,9 @@ When it came to level design, play testers expressed wanting more challenge in v
 > - `star.png` (created in Clip Studio Paint, Original artwork)
 
 > - `Slackey-Regular.tff` [2]
+> - `KDS_BGD Music Loop.wav` (Taken from freesound.org, edited in Davinci Resolve) [4] [6] 
+> - `Box Drop SFX.wav` (Taken from freesound.org, edited in Davinci Resolve) [5]
+> - `Cardboard Box SFX 2` (Taken from freesound.org, edited in Davinci Resolve) [1]
 
 `[1]` Drain Ben. 2019. Cardboard_Impact_02.wav. freesound.org. Retrieved from https://freesound.org/people/BenDrain/sounds/487832/
 `[2]` Goldswain Bevan . running leafy area loop.wav. freesound.org. Retrieved from https://freesound.org/people/bevangoldswain/sounds/54780/
@@ -107,7 +110,6 @@ When it came to level design, play testers expressed wanting more challenge in v
 
 `[10]` Nocturnal Wildlife Encounters – sanctuary.org.nz. Retrieved April 12, 2026 from https://sanctuary.org.nz/nocturnal-wildlife-encounters/
 
-`[11]` Freesound. Freesound. Retrieved from https://freesound.org
 
 ### In-text
 
@@ -118,6 +120,7 @@ When it came to level design, play testers expressed wanting more challenge in v
 
 > Rodrigo Monteiro. 2012. The guide to implementing 2D platformers. (May 2012). Retrieved March 12, 2026 from http://higherorderfun.com/blog/2012/05/20/the-guide-to-implementing-2d-platformers/
 > q5play.org. 2023. Platformer | p5play. Game [Web Browser]. (17 March 2023). q5play.org. Last played March 12, 2026.
+> Freesound. Freesound. Retrieved from https://freesound.org 
 
 ### Research
 
