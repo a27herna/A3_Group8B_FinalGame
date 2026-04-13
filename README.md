@@ -88,23 +88,31 @@ When it came to level design, play testers expressed wanting more challenge in v
 
 > - `Slackey-Regular.tff` [2]
 
+`[1]` Drain Ben. 2019. Cardboard_Impact_02.wav. freesound.org. Retrieved from https://freesound.org/people/BenDrain/sounds/487832/
+`[2]` Goldswain Bevan . running leafy area loop.wav. freesound.org. Retrieved from https://freesound.org/people/bevangoldswain/sounds/54780/
+`[3]` Araujo Gabriel. 2014. Powerup/success.wav. freesound.org. Retrieved from https://freesound.org/people/GabrielAraujo/sounds/242501/
+`[4]` Abel Kjartan. 2020. Altweibersommer: A Mellow and Ambient Soundscape. freesound.org. Retrieved from https://freesound.org/people/kjartan_abel/sounds/540908/
+`[5]` laft2k. 2013. Cardboard Boxed and Glass Smash. freesound.org. Retrieved from https://freesound.org/people/laft2k/sounds/197261/
+`[6]` Roubignolle. Nuit-Amb animaux.aif. freesound.org. Retrieved from https://freesound.org/people/roubignolle/sounds/34701/
+
 ---
 
 ## References
 
+`[7]` www.dynamo6.com. Te Aka Māori Dictionary. Te Aka Māori Dictionary. Retrieved April 12, 2026 from https://www.maoridictionary.co.nz/
+
+`[8]` www.dynamo6.com. Te Aka Māori Dictionary. Te Aka Māori Dictionary. Retrieved April 12, 2026 from https://www.maoridictionary.co.nz/
+
+`[9]` 2018. Wild Nightlife | Forest and Bird. Retrieved April 12, 2026 from https://www.forestandbird.org.nz/resources/wild-nightlife
+
+`[10]` Nocturnal Wildlife Encounters – sanctuary.org.nz. Retrieved April 12, 2026 from https://sanctuary.org.nz/nocturnal-wildlife-encounters/
+
+`[11]` Freesound. Freesound. Retrieved from https://freesound.org
+
 ### In-text
 
-> `[1]` p5js.org. Star - example | p5.js. p5js.org. Retrieved March 12, 2026 from https://archive.p5js.org/examples/form-star.html
-> `[2]` Sideshow. Slackey. Google Fonts. Retrieved April 12, 2026 from https://fonts.google.com/specimen/Slackey
->'[3]' www.dynamo6.com. Te Aka Māori Dictionary. Te Aka Māori Dictionary. Retrieved April 12, 2026 from https://www.maoridictionary.co.nz/
-
->'[4]' www.dynamo6.com. Te Aka Māori Dictionary. Te Aka Māori Dictionary. Retrieved April 12, 2026 from https://www.maoridictionary.co.nz/
-
->'[5]' 2018. Wild Nightlife | Forest and Bird. Retrieved April 12, 2026 from https://www.forestandbird.org.nz/resources/wild-nightlife
-
->'[6]' Nocturnal Wildlife Encounters – sanctuary.org.nz. Retrieved April 12, 2026 from https://sanctuary.org.nz/nocturnal-wildlife-encounters/
-
->'[7]' Freesound. Freesound. Retrieved from https://freesound.org
+> `[12]` p5js.org. Star - example | p5.js. p5js.org. Retrieved March 12, 2026 from https://archive.p5js.org/examples/form-star.html
+> `[13]` Sideshow. Slackey. Google Fonts. Retrieved April 12, 2026 from https://fonts.google.com/specimen/Slackey
 
 ### Inspiration
 
